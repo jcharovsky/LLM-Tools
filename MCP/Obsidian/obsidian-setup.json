@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "obsidian": {
+      "command": "node",
+      "args": ["/Users/jcharovsky/Documents/Programacion/MCP/Obsidian/obsidian-mcp.js"],
+      "env": {
+        "OBSIDIAN_VAULT_PATH": "/Users/jcharovsky/Desktop/ML"
+      }
+    }
+  }
+}
