@@ -1,0 +1,103 @@
+# api-reference
+
+**Source URL:** https://neon.com/docs/reference/api-reference
+
+---
+
+[We’re funding open source projects built on Postgres. Learn more![](/_next/static/svgs/9ee958f8b2be7694e4ce9140c14df68e.svg)](https://neon.com/programs/open-source)
+
+Search...
+
+Ask AI
+
+[](/docs)/[Dev tools (API, CLI, SDKs)](/docs/reference/api-reference)/Neon API
+
+# Neon API
+
+The Neon API allows you to manage your Neon projects programmatically.
+
+Refer to the [Neon API reference](https://api-docs.neon.tech/reference/getting-started-with-neon-api) for supported methods.
+
+The Neon API is a REST API. It provides resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and supports standard HTTP response codes, authentication, and verbs.
+
+#### AI Rules available
+
+Working with AI coding assistants? Check out our [AI rules for the Neon API](/docs/ai/ai-rules-neon-api) to help your AI assistant understand authentication, rate limiting, and best practices when working with the Neon API.
+
+## Authentication
+
+The Neon API uses API keys to authenticate requests. You can view and manage API keys for your account in the Neon Console. For instructions, refer to [Manage API keys](/docs/manage/api-keys).
+
+The client must send an API key in the Authorization header when making requests, using the bearer authentication scheme. For example:
+    
+    
+    curl 'https://console.neon.tech/api/v2/projects' \
+      -H 'Accept: application/json' \
+      -H "Authorization: Bearer $NEON_API_KEY" \
+      -H 'Content-Type: application/json' \
+
+## Neon API base URL
+
+The base URL for a Neon API request is:
+    
+    
+    https://console.neon.tech/api/v2/
+
+Append a Neon API method path to the base URL to construct the full URL for a request. For example:
+    
+    
+    https://console.neon.tech/api/v2/projects/{project_id}/branches/{branch_id}
+
+## Using the Neon API reference to construct and execute requests
+
+You can use the [Neon API reference](https://api-docs.neon.tech/reference/getting-started-with-neon-api) to execute Neon API requests. Select an endpoint, enter an API key token in the **Bearer** field in the **Authorization** section, and supply any required parameters and properties. For information about obtaining API keys, see [Manage API keys](/docs/manage/api-keys).
+
+The [Neon API reference](https://api-docs.neon.tech/reference/getting-started-with-neon-api) also provides request and response body examples that you can reference when constructing your own requests.
+
+For additional Neon API examples, refer to the following topics:
+
+  * [Manage API keys with the Neon API](/docs/manage/api-keys#manage-api-keys-with-the-neon-api)
+  * [Manage projects with the Neon API](/docs/manage/projects#manage-projects-with-the-neon-api)
+  * [Manage branches with the Neon API](/docs/manage/branches#branching-with-the-neon-api)
+  * [Manage computes with the Neon API](/docs/manage/computes#manage-computes-with-the-neon-api)
+  * [Manage roles with the Neon API](/docs/manage/users#manage-roles-with-the-neon-api)
+  * [Manage databases with the Neon API](/docs/manage/databases#manage-databases-with-the-neon-api)
+  * [View operations with the Neon API](/docs/manage/operations#operations-and-the-neon-api)
+
+
+
+#### important
+
+When using the Neon API programmatically, you can poll the operation `status` to ensure that an operation is finished before proceeding with the next API request. For more information, see [Poll operation status](/docs/manage/operations#poll-operation-status).
+
+## API rate limiting
+
+Neon limits API requests to 700 requests per minute (about 11 per second), with bursts allowed up to 40 requests per second per route, per account. If you exceed this, you'll receive an HTTP 429 Too Many Requests error. These limits apply to all public API requests, including those made by the Neon Console. Limits may change, so make sure your app handles 429 errors and retries appropriately. Contact support if you need higher limits.
+
+## Need help?
+
+Join our [Discord Server](https://discord.gg/92vNTzKDGp) to ask questions or see what others are doing with Neon. For paid plan support options, see [Support](/docs/introduction/support).
+
+[PreviousScale with Neon](/docs/ai/ai-scale-with-neon)[NextOverview](/docs/reference/neon-cli)
+
+Last updated on October 10, 2025
+
+Was this page helpful?
+
+YesNo
+
+Thank you for your feedback!
+
+### On this page
+
+  * Authentication
+  * Neon API base URL
+  * Using the Neon API reference to construct and execute requests
+  * API rate limiting
+  * Need help?
+
+
+
+Copy page as markdown[Edit this page on GitHub](https://github.com/neondatabase/website/tree/main/content/docs/reference/api-reference.md)[Open in ChatGPT](https://chatgpt.com/?hints=search&q=Read+https://raw.githubusercontent.com/neondatabase/website/refs/heads/main/content/docs/reference/api-reference.md)
+
+Neon Docs
